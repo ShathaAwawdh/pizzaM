@@ -5,6 +5,9 @@
 package pizzamachine1;
 //import java.util.ArrayList;
 
+//import javax.swing.JOptionPane;
+
+
 
 
 /**
@@ -19,9 +22,9 @@ public class pizzaClass {
     
     //public static void topEngredient(){
         
-   private  ingredient mozzarella1=new ingredient("mozzarella",10);
+   private  ingredient mozzarella1=new ingredient("mozzarella",1000);
     // ingredientArr.add(mozzarella);
-   private  ingredient tomatoes1 =new ingredient("tomatoes",5);
+   private  ingredient tomatoes1 =new ingredient("tomatoes",1000);
       //ingredientArr.add(tomatoes);
    private  ingredient garlic1 =new ingredient("garlic",1000);
         //ingredientArr.add(garlic);
@@ -103,6 +106,17 @@ public class pizzaClass {
     public void addEngredient(){
         
     }
+    
+    public static void acceptNum(int n)throws wrongEntryException{
+       
+        if(n>8&&n<1){
+           throw new wrongEntryException("the nimber of slice should be 8 or liss");
+        }else{
+            throw new wrongEntryException("wrong entry"); 
+        }
+        
+    }
+     
 
     public String pizzaFinal(double engCal,int engWeight,int numOfSlice){
         
