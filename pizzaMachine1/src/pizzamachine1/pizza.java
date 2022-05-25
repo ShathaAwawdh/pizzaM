@@ -5,8 +5,8 @@
 package pizzamachine1;
 
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
 
@@ -753,6 +753,12 @@ public class pizza extends javax.swing.JFrame {
         double engCal = 0;
         int engWeight = 0;
         int numOfslice =Integer.parseInt(numOFslice.getText());
+        try{
+            pizzaClass.acceptNum(numOfslice);
+        }catch (wrongEntryException e){
+            JOptionPane.showMessageDialog(null, e.toString());
+            return;
+        }
         mixer mixS=new mixer();
         if (thickness == 2) {
             
@@ -898,16 +904,7 @@ public class pizza extends javax.swing.JFrame {
 
     private void numOFsliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numOFsliceActionPerformed
         // TODO add your handling code here:
-        if(Integer.parseInt(numOFslice.getText())>8){
-           
-            try {
-                throw new wrongEntryException("The number of slides you entered is wrong,"
-                        + " the largest possible number is 8");
-            } catch (wrongEntryException ex) {
-              JOptionPane.showMessageDialog(null, ex.toString());
-            }
-           
-        }
+       
     }//GEN-LAST:event_numOFsliceActionPerformed
 
     /**
