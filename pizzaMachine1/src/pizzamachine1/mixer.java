@@ -13,7 +13,7 @@ package pizzamachine1;
 public class mixer {
     
     private dough pizzaDough;
-    static int weightDough;
+    private int weightDough;
     
     public mixer(){
         this.weightDough=5000;
@@ -44,7 +44,7 @@ public class mixer {
        
     }
     
-    public static void decDough(int i) throws quantityOutException {
+    public void decDough(int i) throws quantityOutException {
         
        
         
