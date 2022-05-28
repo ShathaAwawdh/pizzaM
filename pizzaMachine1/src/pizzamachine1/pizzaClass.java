@@ -18,29 +18,26 @@ public class pizzaClass {
 
     private pan pan;
     private dough dough;
-  //  static ArrayList<ingredient> ingredientArr=new ArrayList<>();
-    
-    //public static void topEngredient(){
+ 
         
    private  ingredient mozzarella1=new ingredient("mozzarella",1000);
-    // ingredientArr.add(mozzarella);
+ 
    private  ingredient tomatoes1 =new ingredient("tomatoes",1000);
-      //ingredientArr.add(tomatoes);
+     
    private  ingredient garlic1 =new ingredient("garlic",1000);
-        //ingredientArr.add(garlic);
+      
    private  ingredient onion1=new ingredient("onion",1000);
-    //  ingredientArr.add(onion);
+   
    private  ingredient sauce1=new ingredient("sauce",1000);
-     // ingredientArr.add(sauce);
+    
    private  ingredient oregano1=new ingredient("oregano",1000);
-     // ingredientArr.add(oregano);
+   
    private  ingredient chicken1=new ingredient("chicken",1000);
-     // ingredientArr.add(chicken);
+     
    private  ingredient meat1 =new ingredient("meat",1000);
-     // ingredientArr.add(meat);
+    
    private  ingredient peppirone1 =new ingredient("peppirone",1000);
-     // ingredientArr.add(peppirone);
-    //}
+   
 
     public ingredient getMozzarella1() {
         return mozzarella1;
@@ -109,10 +106,8 @@ public class pizzaClass {
     
     public static void acceptNum(int n)throws wrongEntryException{
        
-        if(n>8&&n<1){
+        if(n>8||n<1){
            throw new wrongEntryException("the nimber of slice should be 8 or liss");
-        }else{
-            throw new wrongEntryException("wrong entry"); 
         }
         
     }
