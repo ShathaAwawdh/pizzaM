@@ -19,7 +19,7 @@ public class pizza extends javax.swing.JFrame {
     ArrayList<ingredient> addEngArr = new ArrayList<>();
     int size = 0;
     int thickness;
-
+    mixer mixS=new mixer();
     /**
      * Creates new form pizza
      */
@@ -759,7 +759,7 @@ public class pizza extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e.toString());
             return;
         }
-        mixer mixS=new mixer();
+       
         if (thickness == 2) {
             
             switch (size) {
@@ -772,7 +772,7 @@ public class pizza extends javax.swing.JFrame {
                     
                 {
                     try {
-                        mixer.decDough(200);
+                        mixS.decDough(200);
                     } catch (quantityOutException ex) {
                         JOptionPane.showMessageDialog(null, ex.toString());
                         return;
@@ -793,7 +793,7 @@ public class pizza extends javax.swing.JFrame {
                    // mixer mix=new mixer();
                 {
                     try {
-                        mixer.decDough(350);
+                        mixS.decDough(350);
                     } catch (quantityOutException ex) {
                        JOptionPane.showMessageDialog(null, ex.toString());
                        return;
@@ -813,7 +813,7 @@ public class pizza extends javax.swing.JFrame {
                    // mixer mixL=new mixer();
                 {
                     try {
-                        mixer.decDough(500);
+                        mixS.decDough(500);
                     } catch (quantityOutException ex) {
                        JOptionPane.showMessageDialog(null, ex.toString());
                        return;
@@ -836,7 +836,7 @@ public class pizza extends javax.swing.JFrame {
                    // mixer mixS=new mixer(); 
                 {
                     try {
-                        mixer.decDough(100);
+                        mixS.decDough(100);
                     } catch (quantityOutException ex) {
                        JOptionPane.showMessageDialog(null, ex.toString());
                        return;
@@ -856,7 +856,7 @@ public class pizza extends javax.swing.JFrame {
                    // mixer mixM=new mixer();
                 {
                     try {
-                        mixer.decDough(250);
+                        mixS.decDough(250);
                     } catch (quantityOutException ex) {
                       JOptionPane.showMessageDialog(null, ex.toString());
                       return;
@@ -876,7 +876,7 @@ public class pizza extends javax.swing.JFrame {
                     // mixer mixL=new mixer();
                 {
                     try {
-                        mixer.decDough(300);
+                        mixS.decDough(300);
                     } catch (quantityOutException ex) {
                        JOptionPane.showMessageDialog(null, ex.toString());
                        return;
