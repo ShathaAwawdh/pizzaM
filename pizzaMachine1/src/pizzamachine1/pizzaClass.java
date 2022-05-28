@@ -100,9 +100,7 @@ public class pizzaClass {
         return pan;
     }
 
-    public void addEngredient(){
-        
-    }
+  
     
     public static void acceptNum(int n)throws wrongEntryException{
        
